@@ -1,6 +1,6 @@
 import React from 'react';
 
-function BlogPost({ title, content }) {
+const BlogPost = ({ title, content }) => {
   return (
     <article>
       <h2>{title}</h2>

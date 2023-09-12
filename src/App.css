@@ -4,6 +4,10 @@ body {
   padding: 0;
 }
 
+.head {
+  justify-content: center;
+}
+
 /* Header styles */
 header {
   background-color: #333;
