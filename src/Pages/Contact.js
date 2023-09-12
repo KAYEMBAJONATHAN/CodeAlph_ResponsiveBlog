@@ -2,23 +2,17 @@ import React, { useState } from 'react';
 import "../Style/contact.css";
 
 const Contact = () => {
-  // Define state variables for form fields
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
-  // Function to handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // You can add your logic here to handle the form submission, such as sending the data to a server or displaying a success message.
-
-    // For now, let's just log the form data to the console.
     console.log('Name:', name);
     console.log('Email:', email);
     console.log('Message:', message);
 
-    // Optionally, you can clear the form fields after submission.
     setName('');
     setEmail('');
     setMessage('');

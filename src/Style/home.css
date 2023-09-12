@@ -1,11 +1,9 @@
-/* Style for the home container */
 .home {
     margin: 0 auto;
     max-width: 800px;
     padding: 20px;
   }
   
-  /* Style for the hero section */
   .hero {
     background-color: #f0f0f0;
     padding: 40px;
@@ -22,7 +20,6 @@
     margin-bottom: 30px;
   }
   
-  /* Style for the "Explore Blog" button */
   .btn {
     display: inline-block;
     padding: 10px 20px;
@@ -37,8 +34,7 @@
   .btn:hover {
     background-color: #0056b3;
   }
-  
-  /* Style for the featured-posts section */
+
   .featured-posts {
     margin-top: 40px;
   }
@@ -48,7 +44,6 @@
     margin-bottom: 20px;
   }
   
-  /* Style for individual featured posts */
   .post {
     background-color: #fff;
     border: 1px solid #ddd;
@@ -73,7 +68,6 @@
     margin-bottom: 10px;
   }
   
-  /* Style for the "Read More" link */
   .post a {
     text-decoration: none;
     color: #007bff;
