@@ -35,7 +35,7 @@
 # 📖 <a name="about-project"></a>
 
 **CodeAlph_ResponsiveBlog**
-""
+"A responsive blog website is a web platform designed to adapt and display content optimally on various devices, including desktop computers, tablets, and mobile devices. It utilizes responsive design principles to automatically adjust the layout, images, and text to fit the screen size of the device being used, ensuring a seamless and user-friendly browsing experience across different platforms."
 <a href="https://reactjs.org/">React.js</a>
 
 ## Screenshot <a name="screenshot"></a>
