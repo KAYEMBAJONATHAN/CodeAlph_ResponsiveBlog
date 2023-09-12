@@ -18,7 +18,7 @@ const About = () => {
         </p>
         <div>
           <h3>From Jokes to Code: My Software Development Journey</h3>
-          <h4>
+          <h4 className="about">
           "My journey as a software developer started like a joke. I used to think coding 
           was a foreign language, and computers were mysterious black boxes.
           "The Jokester Phase:
