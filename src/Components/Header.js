@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Header() {
+const Header = () => {
   return (
     <header>
-      <h1>Your Blog</h1>
+        <h1>Blog Wesbsite</h1>
       <nav>
         <ul>
           <li>

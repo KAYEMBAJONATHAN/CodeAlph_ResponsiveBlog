@@ -1,7 +1,8 @@
 import React from 'react';
 
-function Footer() {
+const Footer = () => {
   return (
+    
     <footer>
       &copy; {new Date().getFullYear()} Your Blog
     </footer>
