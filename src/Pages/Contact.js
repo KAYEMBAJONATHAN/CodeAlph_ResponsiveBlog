@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
-import "../Style/contact.css";
+import '../Style/contact.css';
 
 const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [submissionResult, setSubmissionResult] = useState(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log('Name:', name);
-    console.log('Email:', email);
-    console.log('Message:', message);
+    // Simulate a successful form submission
+    // You would typically send this data to a server and handle the response
+    // Here, we'll just display a success message
+    setSubmissionResult('Form submitted successfully!');
 
     setName('');
     setEmail('');
@@ -21,9 +23,10 @@ const Contact = () => {
   return (
     <div className="contact">
       <h2>Contact Us</h2>
+      {submissionResult && <p className="success-message">{submissionResult}</p>}
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="name">Name:</label>
+          <label htmlFor="name">Full Name:</label>
           <input
             type="text"
             id="name"
@@ -58,6 +61,6 @@ const Contact = () => {
       </form>
     </div>
   );
-}
+};
 
 export default Contact;
