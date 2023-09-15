@@ -1,5 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useContext, createContext } from 'react';
+import { useEffect } from 'react';
 import '../Style/contact.css';
+
+const FormDataContext = createContext();
 
 const Contact = () => {
   const [name, setName] = useState('');
@@ -7,17 +10,33 @@ const Contact = () => {
   const [message, setMessage] = useState('');
   const [submissionResult, setSubmissionResult] = useState(null);
 
+  useEffect(() => {
+    const formDataFromStorage = JSON.parse(localStorage.getItem('formData'));
+    if (formDataFromStorage) {
+      setName(formDataFromStorage.name || '');
+      setEmail(formDataFromStorage.email || '');
+      setMessage(formDataFromStorage.message || '');
+    }
+  }, []);
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Simulate a successful form submission
-    // You would typically send this data to a server and handle the response
-    // Here, we'll just display a success message
-    setSubmissionResult('Form submitted successfully!');
+    setTimeout(() => {
+      const serverResponse = 'Form submitted successfully!';
+      setSubmissionResult(serverResponse);
 
-    setName('');
-    setEmail('');
-    setMessage('');
+      setName('');
+      setEmail('');
+      setMessage('');
+
+      localStorage.setItem(
+        'formData',
+        JSON.stringify({ name, email, message })
+      );
+    }, 1000);
+
+    setSubmissionResult('Submitting...');
   };
 
   return (
@@ -64,3 +83,21 @@ const Contact = () => {
 };
 
 export default Contact;
+
+export const FormDataProvider = ({ children }) => {
+  const [formData, setFormData] = useState({});
+
+  return (
+    <FormDataContext.Provider value={{ formData, setFormData }}>
+      {children}
+    </FormDataContext.Provider>
+  );
+};
+
+export const useFormData = () => {
+  const context = useContext(FormDataContext);
+  if (!context) {
+    throw new Error('useFormData must be used within a FormDataProvider');
+  }
+  return context;
+};
