@@ -1,11 +1,23 @@
 .social-media {
-    text-align: center;
-    margin-top: 20px;
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 20px;
   }
   
   .social-media h2 {
     font-size: 24px;
     color: #333;
+  }
+
+  .computer, .link {
+    max-width: 30%;
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px;
+    display: inline-block;
+    padding: 10px;
   }
   
   .social-media ul {
@@ -21,9 +33,15 @@
   .social-media a {
     text-decoration: none;
     color: #007BFF;
+    padding: 40px;
   }
   
   .social-media a:hover {
     text-decoration: underline;
   }
-  
+
+  .link a {
+    text-decoration: none;
+    color: #007bff;
+    margin-left: 10px; /* Add spacing between the image and link */
+  }

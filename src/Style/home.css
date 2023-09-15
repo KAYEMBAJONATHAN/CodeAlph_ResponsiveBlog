@@ -5,7 +5,7 @@
   }
   
   .hero {
-    background-color: #f0f0f0;
+    background-color: #a9a9a9;
     padding: 40px;
     text-align: center;
   }
@@ -45,7 +45,7 @@
   }
   
   .post {
-    background-color: #fff;
+    background-color: #a9a9a9;
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 20px;
@@ -70,7 +70,7 @@
   
   .post a {
     text-decoration: none;
-    color: #007bff;
+    color: #a52a52;
     font-weight: bold;
     transition: color 0.3s ease;
   }
